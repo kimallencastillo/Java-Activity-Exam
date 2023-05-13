@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;c1&apos; in &apos;Calculator.main(...)&apos; to &apos;c&apos;&#x0D;&#x0A;- Original project: &apos;ClassesAndObjectsCalculatorJava&apos;&#x0D;&#x0A;- Original element: &apos;Calculator.main(String[]).c1&apos;&#x0D;&#x0A;- Renamed element: &apos;c1&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;c1&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Calculator.java[Calculator~main~\[QString;@c1!217!239!223!224!QCalc1;!0!false" name="c" references="true" stamp="1607919347219" version="1.0"/>
+</session>

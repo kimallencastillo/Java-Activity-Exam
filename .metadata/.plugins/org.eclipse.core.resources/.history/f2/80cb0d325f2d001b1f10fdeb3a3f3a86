@@ -1,0 +1,38 @@
+import java.util.Stack;
+import java.util.Arrays;
+
+public class Person {
+	static String output , input;
+	static int i;
+	
+
+	public static void main(String[] args) {
+		input = "I love Programming";
+		
+		System.out.println(doRev());
+		
+	
+	}
+	
+	public static String doRev() {
+
+		int stackSize = input.length();
+		
+		Stack<String> theStack = new Stack<>();
+		
+		for(i = 0 ; i < stackSize; i++) {
+			
+		}
+		output = " ";
+		String[] rev = new String[stackSize];
+		
+		for(i = 0 ; i < stackSize; i++) {
+			rev[i] = theStack.pop();
+		}
+		
+		output = Arrays.toString(rev);
+		
+		return output;
+	}
+
+}

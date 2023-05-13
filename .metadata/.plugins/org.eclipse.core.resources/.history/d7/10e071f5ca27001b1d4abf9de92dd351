@@ -1,0 +1,30 @@
+/* Sample program 
+
+ * that shows how Object-Oriented methodology is implemented in Jac
+
+ */
+
+//abstract - means incomplete
+public class CastilloAct4_2 {
+
+	public static void main(String[] args) {
+		
+		CastilloAct4_2_sub pc = new CastilloAct4_2_sub();
+
+	    //pc.setEmp("Castillo Kim Allen",1001,355,36);
+		
+	    
+	    pc.calcGross();
+
+	    pc.calcTax();
+
+	    pc.calcNet();
+
+	    pc.dispPay();
+		
+	    
+
+	}
+
+}
+

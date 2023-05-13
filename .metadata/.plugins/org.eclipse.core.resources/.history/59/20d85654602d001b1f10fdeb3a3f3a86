@@ -1,0 +1,47 @@
+import java.util.Stack;
+import java.util.Arrays;
+
+public class Person {
+	public static String output , input , temp;
+	static int i;
+	
+
+	public static void main(String[] args) {
+		input = "I love Programming";
+		
+		System.out.println(doRev());
+		
+	
+	}
+	
+	static String doRev() {
+
+		
+		Stack<String> theStack = new Stack<>();
+		
+		output = "";
+		
+		for(i = 0 ; i < input.length(); i++) {
+			if(input.charAt(i) == ' ') {
+				theStack.add(output);
+				output = "";
+			}else
+					output = output + input.charAt(i);
+		
+		output = " ";
+		}
+		
+		  theStack.add(output);
+		  theStack.pop();
+		  
+		  while(!theStack.isEmpty()){
+			 temp  = theStack.peek();
+			 output = output + " " + temp;
+			 temp = theStack.pop();
+			
+		    
+			  return output;
+		}
+		
+	}
+}

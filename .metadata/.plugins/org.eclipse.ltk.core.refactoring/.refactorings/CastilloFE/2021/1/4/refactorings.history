@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;pr&apos; in &apos;FEMain.main(...)&apos; to &apos;pay&apos;&#x0D;&#x0A;- Original project: &apos;CastilloFE&apos;&#x0D;&#x0A;- Original element: &apos;FEMain.main(String[]).pr&apos;&#x0D;&#x0A;- Renamed element: &apos;pr&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;pr&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{FEMain.java[FEMain~main~\[QString;@pr!192!218!200!201!QPayroll;!0!false" name="pay" references="true" stamp="1611120813877" version="1.0"/>
+</session>

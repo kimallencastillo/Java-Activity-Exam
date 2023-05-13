@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;dineTable&apos; in &apos;CastilloAct5_1&apos; to &apos;codeCos&apos;&#x0D;&#x0A;- Original project: &apos;DrivenMenuJava&apos;&#x0D;&#x0A;- Original element: &apos;CastilloAct5_1.dineTable&apos;&#x0D;&#x0A;- Renamed element: &apos;CastilloAct5_1.codeCos&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;dineTable&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;{CastilloAct5_1.java[CastilloAct5_1^dineTable" name="codeCos" references="true" setter="false" stamp="1607314582165" textual="false" version="1.0"/>
+</session>

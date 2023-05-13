@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int n, max;
+		int NUM1;
+		int LARGE;
+		System.out.print("Input the numbers to compare");
+		n = input.nextInt();
+		
+		
+		System.out.println("Enter the First Number");
+		NUM1 = input.nextInt();
+		
+		System.out.println("Enter the Second Number");
+		LARGE = input.nextInt();
+		
+		for(int COUNT = 0; COUNT < NUM1 ; COUNT++) {
+			if(NUM1 > LARGE) {
+				LARGE = NUM1;
+			if(COUNT == n) {
+				
+			}
+			}
+			
+		}
+      
+	}
+
+}

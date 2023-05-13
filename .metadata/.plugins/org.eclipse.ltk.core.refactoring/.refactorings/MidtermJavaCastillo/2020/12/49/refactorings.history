@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Castillo_Me.java&apos; to &apos;Castillo_ME.java&apos;&#x0D;&#x0A;- Original project: &apos;MidtermJavaCastillo&apos;&#x0D;&#x0A;- Original element: &apos;Castillo_Me.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Castillo_ME.java&apos;" description="Rename compilation unit &apos;Castillo_Me.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{Castillo_Me.java" name="Castillo_ME.java" references="false" stamp="1606886699051" version="1.0"/>
+</session>

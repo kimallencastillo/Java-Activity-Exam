@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;newbal&apos; in &apos;CastilloMQ2&apos; to &apos;newBal&apos;&#x0D;&#x0A;- Original project: &apos;MidtermQuiz2MethodsAndArrays&apos;&#x0D;&#x0A;- Original element: &apos;CastilloMQ2.newbal&apos;&#x0D;&#x0A;- Renamed element: &apos;CastilloMQ2.newBal&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;newbal&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;{CastilloMQ2.java[CastilloMQ2^newbal" name="newBal" references="true" setter="false" stamp="1606106558788" textual="false" version="1.0"/>
+</session>

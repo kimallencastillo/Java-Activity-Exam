@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class StringMain {
+	static Scanner in = new Scanner(System.in);
+	public static void main(String[] args) {
+		String s ="" ;
+		char ans;
+		String ver , inverse , diag;
+		Str1 cp = new Str1();
+		do {
+		System.out.print("\nEnter a word: ");
+		s = in.nextLine();
+		
+		cp.set(s);
+		ver = cp.prt4();
+		System.out.println();
+		inverse = cp.prt5();
+		System.out.println();
+		diag = cp.prt6();
+		
+		//System.out.println(ver);
+		//System.out.println(inverse);
+		//System.out.println(diag);
+		
+		System.out.println("Try AGIAN?");
+		ans = in.next().charAt(0);
+		}while(ans == 'Y');
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;StacksReverseJaa&apos; to &apos;StacksReverseJava&apos;" description="Rename resource &apos;StacksReverseJaa&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/StacksReverseJaa" name="StacksReverseJava" stamp="1605058625984" updateReferences="true"/>
+</session>

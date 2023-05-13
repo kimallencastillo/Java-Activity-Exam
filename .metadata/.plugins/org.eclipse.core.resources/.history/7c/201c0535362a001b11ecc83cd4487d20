@@ -1,0 +1,143 @@
+import java.util.Scanner;
+public class CastilloMQ1 {
+	final static Scanner in = new Scanner(System.in);
+	public static int menu , empNo;
+	public static float  rate , regHr , overHr , regPay , overPay , gross , tax, netPay	;
+	public static float d1, d2, d3, d4, d5, d6, d7;
+	public static String empName;
+	public static int[] empNums = {1111, 1112, 1113, 1114};
+	public static char ans;
+	public static String[] empNames = {"Lebron James", "Micheal Jordan", "Luka Doncic", "James Harden"};
+
+	public static void main(String[] args) {
+		do {
+			prtMenu();
+			menu = in.nextInt();		
+		switch(menu) {
+	
+		case 1:
+			prtList();
+			break;
+		case 2:
+			getEmp();
+			break;
+		case 3:
+			getHrs();
+			break;
+		case 4:
+			prtPay();
+			break;
+			}
+		
+		System.out.println("Type 'R' to return..." );
+		ans = in.next().charAt(0);
+		}while(ans == 'R' || ans == 'r');
+		
+	}
+	public static void prtMenu() {
+		do {
+		System.out.println("\t\tList of Option");
+		System.out.println();
+		System.out.println("\t[1] - Dispay Employees");
+		System.out.println("\t[2] - Get Employees");
+		System.out.println("\t[3] - Get Employees Hours");
+		System.out.println("\t[4] - Display Payslip");
+		System.out.println("\t[0] - Quit");
+		
+		System.out.println();
+		System.out.print("Choose an Option: ");
+		}while(menu == 0);	
+		
+	}
+	public static void prtList() {
+		
+		System.out.println();
+		System.out.println("\tNo." + "    Names");
+		for(int i = 0 ; i < empNums.length; i++) {
+			System.out.println("\t" + empNums[i]+ "   " + empNames[i]);
+		}
+		
+	}
+	public static void getEmp() {
+		System.out.println("\t\t Employee Record");
+		
+		System.out.println();
+		System.out.print("\tEmployee No: ");
+		empNo = in.nextInt();
+		
+		switch(empNo) {
+		case 1111:
+			empName ="Lebron James";
+			rate = 350;
+			break;
+		case 1112:
+			empName ="Micheal Jordan";
+			rate = 450;
+			break;
+		case 1113:
+			empName ="Luka Doncic";
+			rate = 300;
+			break;
+		case 1114:
+			empName ="James harden";
+			rate = 400;
+			break;
+		}
+		System.out.println("\tEmployee Name: " + empName);
+		System.out.println("\tRate Per hour: " + rate);
+	}
+	public static void getHrs() {
+		System.out.println("\tTransaction Hours For Employees: " + empName);
+		System.out.println("\tEnter Hours Worked below:");
+		
+		System.out.print("\t\tDay 1: ");
+		d1 = in.nextFloat();
+
+		System.out.print("\t\tDay 2: ");
+		d2 = in.nextFloat();
+
+		System.out.print("\t\tDay 3: ");
+		d3 = in.nextFloat();
+
+		System.out.print("\t\tDay 4: ");
+		d4 = in.nextFloat();
+
+		System.out.print("\t\tDay 5: ");
+		d5 = in.nextFloat();
+
+		System.out.print("\t\tDay 6: ");
+		d6 = in.nextFloat();
+
+		System.out.print("\t\tDay 7: ");
+		d7 = in.nextFloat();
+		
+		regHr = d1 + d2 + d3 + d4 + d5;
+		overHr = d6 + d7;
+	}
+	public static void prtPay() {
+		System.out.println("\tEmployee Payslip");
+		System.out.println(empName);
+		System.out.println(empNo);
+		
+		regPay = rate * regHr;
+		overPay = rate * 1.25f + overHr;
+		gross = regPay + overPay;
+		if(gross > 1500)
+			tax = gross * 0.1f;
+		else if(gross < 1000)
+			tax = 0;
+		else 
+			tax = gross * 0.5f;
+		
+		netPay = gross - tax;
+		System.out.println("\t\t   Regular Pay: " + regPay);
+		System.out.println("\t\t  Ovettime Pay: " + overPay);
+		System.out.println("\t\tWithholdng Tax: " + tax);
+		System.out.println("\t\t        NetPay: " + netPay);
+		
+		
+	}
+	
+	
+
+}

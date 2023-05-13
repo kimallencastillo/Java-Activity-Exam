@@ -1,0 +1,36 @@
+public class Person {
+
+	public static void main(String[] args) {
+		
+		Person me = new Person();
+		me.name = "kim";
+		System.out.println(me.talk());
+	}
+	
+	static String name;
+	public static String talk() {
+		return "hi " + name;
+	}
+	
+/*	public static String doRev() {
+
+		int stackSize = input.length();
+		
+		Reverse<String> theStack = new Reverse<String>();
+		
+		for(i = 0 ; i < input.length(); i++) {
+			
+		}
+		output = " ";
+		String[] rev = new String[stackSize];
+		
+		for(i = 0 ; i < stackSize; i++) {
+			rev[i] = theStack.pop();
+		}
+		
+		output = Arrays.toString(rev);
+		
+		return output;
+	}*/
+
+}

@@ -1,0 +1,58 @@
+
+public class Greet {
+	String  gender, cs, time, a;
+	int age;
+
+	
+	public void genderSet() {
+		if(gender.equalsIgnoreCase("F")) 
+			 gender = "Female";
+		else if(gender.equalsIgnoreCase("M")) 
+			 gender = "Male";
+		else 
+			 gender = "";
+			
+		
+	}
+	
+	public void civilSet() {
+		cs = " "; gender = " ";
+		if(cs.equalsIgnoreCase("S") && gender.equalsIgnoreCase("F")) { 
+			 cs = "Ms";
+		}else if(cs.equalsIgnoreCase("M" ) && gender.equalsIgnoreCase("F")) {
+			 cs = "Mrs";
+		}else if(cs.equalsIgnoreCase("M") || cs.equalsIgnoreCase("S") && gender.equalsIgnoreCase("M")) {
+			 cs = "Mr";
+		}else
+			 cs = "";
+		
+	}
+	public void timeSet() {
+		time = " ";
+		if(time.equals("M")) {
+			time = "Good Morning";
+		}else if(time.equals("A")) {
+			 time = "Lively Afternoon";
+		}else if(time.equals("E")) {
+			 time = "Wonderful Evening";
+		}else 
+			time = ""; 
+	}
+	public void ageSet() {
+		if(age < 21)
+			a = "kid";
+		else if(age > 60)
+			a = "Senior";
+		else 
+			a = " ";
+	}
+	public void set(String gen, String timeF, String civil) {
+		gender = gen;
+		time = timeF;
+		cs = civil;
+		
+	}
+	
+	
+
+}

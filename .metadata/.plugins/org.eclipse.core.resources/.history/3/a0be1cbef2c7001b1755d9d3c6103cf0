@@ -1,0 +1,122 @@
+
+public class Greet {
+	String  nameSet, gender, cs, time, a;
+	int age;
+
+	
+	/*public void genderSet() {
+		if(gender.equalsIgnoreCase("F")) 
+			 gender = "Female";
+		else if(gender.equalsIgnoreCase("M")) 
+			 gender = "Male";
+		else 
+			 gender = "";
+			
+		
+	}
+	
+	public void civilSet() {
+		cs = " "; gender = " ";
+		if(cs.equalsIgnoreCase("S") && gender.equalsIgnoreCase("F")) { 
+			 cs = "Ms";
+		}else if(cs.equalsIgnoreCase("M" ) && gender.equalsIgnoreCase("F")) {
+			 cs = "Mrs";
+		}else if(cs.equalsIgnoreCase("M") || cs.equalsIgnoreCase("S") && gender.equalsIgnoreCase("M")) {
+			 cs = "Mr";
+		}else
+			 cs = "";
+		
+	}
+	public void timeSet() {
+		time = " ";
+		if(time.equals("M")) 
+			time = "Good Morning";
+		else if(time.equals("A")) 
+			 time = "Lively Afternoon";
+		else if(time.equals("E")) 
+			 time = "Wonderful Evening";
+		else 
+			time = ""; 
+	}
+	public String ageSet(int age) {
+		if(age < 21)
+			a = "kid";
+		else if(age > 60)
+			a = "Senior";
+		else 
+			a = "";
+		return a;
+	}*/
+	public void valid() {
+		if(gender.equalsIgnoreCase("F")) 
+			 gender = "Female";
+		else if(gender.equalsIgnoreCase("M")) 
+			 gender = "Male";
+		else 
+			 gender = "";
+		
+		if(cs.equalsIgnoreCase("S") && gender.equalsIgnoreCase("F")) { 
+			 cs = "Ms";
+		}else if(cs.equalsIgnoreCase("M" ) && gender.equalsIgnoreCase("F")) {
+			 cs = "Mrs";
+		}else if(cs.equalsIgnoreCase("M") || cs.equalsIgnoreCase("S") && gender.equalsIgnoreCase("M")) {
+			 cs = "Mr";
+		}else
+			 cs = "";
+		
+		
+		if(time.equals("M")) 
+			time = "Good Morning";
+		else if(time.equals("A")) 
+			 time = "Lively Afternoon";
+		else if(time.equals("E")) 
+			 time = "Wonderful Evening";
+		else 
+			time = ""; 
+		
+		if(age < 21)
+			a = "kid";
+		else if(age > 60)
+			a = "Senior";
+		else 
+			a = "";
+		
+		 if(cs.isEmpty() && time.isEmpty() && gender.isEmpty()) {
+				System.out.println("\t\tError: Wrong Gender , Civil status and Frame Time value inputted "); 
+				System.out.println();
+			}else if(time.isEmpty() && gender.isEmpty()) {
+				System.out.println("\t\tError: Wrong Gender and Frame time value inputted "); 
+				System.out.println();
+			}else if(cs.isEmpty() && gender.isEmpty()) {
+				System.out.println("\t\tError: Wrong Gender and Civil status value inputted ");
+				System.out.println();
+			}else if(cs.isEmpty() && time.isEmpty()) {
+				System.out.println("\t\tError: Wrong Civil status and Frame Time value inputted ");
+				System.out.println();
+			}else if(cs.isEmpty()) { 
+				System.out.println("\t\t\tError: Wrong Gender value inputted "); 
+				System.out.println();
+			}else if(cs.isEmpty()) { 
+				System.out.println("\t\t\tError: Wrong Civil Status value inputted "); 
+				System.out.println();
+			}else if(time.isEmpty()) {
+				System.out.println("\t\t\tError: Wrong Frame Time value inputted");
+				System.out.println();
+			}else {	
+				System.out.println("\t\t\t"+ time + "  " + a);
+				System.out.println("\t\t\t"+ cs + "  " + nameSet);
+				}
+		 
+		
+	}
+	public void set(String gen, String civil, String timeF, String name) {
+		gender = gen;
+		time = timeF;
+		cs = civil;
+		nameSet = name;
+		
+	}
+	
+	
+
+}

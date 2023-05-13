@@ -1,0 +1,33 @@
+package snippet;
+
+import javax.swing.JOptionPane;
+
+public class Snippet {
+	int j, nItems, num;
+	
+	 int[] arr = new int[100];
+	
+	 String number;
+	
+	 String numb = " ";
+	
+	 numb = JOptionPane.showInputDialog("Enter the number of elements ");
+	
+	 nItems = Integer.parseInt(numb);
+	
+	 for (j =0 ; j<nItems ; j++)
+	
+	 {
+	
+	 number = JOptionPane.showInputDialog("Enter the element ");
+	
+	 arr[j] = Integer.parseInt(number);
+	
+	 }
+	
+	 for (j =0 ; j<nItems ; j++)
+	
+	 System.out.print ( arr[j] + " ");
+}
+
+}
