@@ -1,0 +1,250 @@
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+public class MyList {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		//Benefits of an ArrayList is that is that it can dynamically resize
+		/***************Array vs ArrayList ****************************
+		In Array when u set an a size in front or in user input ,but once 
+		it set your not going to able to add element beyond the size of an 
+		Array unlike in ArrayList when you add extra information to him, it 
+		will actually resize as necessary to fit in that information 
+		***************************************************************/
+		
+        System.out.println("________________________________");
+		
+		System.out.println("working with ArrayList");
+		//explaining the syntax of an List 
+		//there are various List in jav a but we don't necessary care about the inner workings of how this List work.
+		/*Ex. When you are a normal person driving a car you don't really need to know all about the inner workings 
+		of the engine all of that stuff it is abstracted away from you all you care about is steering wheel which 
+		you can use to turn the pedal if you want to speed up.*/
+		List<String> name = new ArrayList<String>();
+		//on the left we put name very general all of this is saying that some type of List is assign to it
+		//and on the right we are very specific that we definitely want an ArrayList the main reason is that 
+		//we can basically swap out the implementation without changing a whole lot.
+		
+		//so back in the car the steering wheel the pedal and the break that is known as interface its how we work in the car 
+		//the internal of the car the body style etc that is known as implementation so when choosing a car we don't necessary 
+		//need to worry about the implementation as long as the interfaces is the same is what we understand
+		//"List" is an example of an interfaces while on the right side the "ArrayList" is an example of implementation
+		
+		//if you want to know about implementation interfaces you can read this https://docs.oracle.com/javase/7/docs/api/
+		System.out.println("________________________________");
+		
+		//Syntax of an ArrayList
+		//         Type    name
+		ArrayList<String> student = new ArrayList<String>();
+		//<> = generic programming it allows you to create a class that can work in various types 
+ 
+		//Creating a List of a String
+		//you can use .add when you want to add an element on a ArrayList
+		List<String> bandori = new ArrayList<String>();
+		//you can add element on the List on at a time by using .add()
+		bandori.add("Kasumi");
+		bandori.add("Arisa");
+		bandori.add("Hanazono");
+		bandori.add("Rimi");
+		bandori.add("Saaya");
+		//8 element on the list
+		
+		System.out.println(bandori);
+		//OUTPUT >> [Kasumi, Arisa, Hanazono, Rimi, Saaya]
+		
+		System.out.println("________________________________");
+		
+		//you can be more specific when adding an element .add(index, element);
+		bandori.add(4, "aya");//the element 4 will be shipped as Saaya as aya
+		//so "Saaya" will move into index 5 
+		System.out.println(bandori.get(4));
+		
+		System.out.println("________________________________");
+		
+		//to get an element you can use .get()   
+		System.out.println(bandori.get(1));
+		//OUTPUT >> Arisa
+		
+		System.out.println("________________________________");
+		
+		//If you want to update a particular spot .set(index, element)
+		//index   >> index of an element to be replace
+		//element >> element to be stored at the specified position
+		bandori.set(1, "Kaoruko");//replacing Arisa index 1 to Kaoruko 
+		System.out.println(bandori.get(1));
+		//OUTPUT >> Kaoruko
+		
+		System.out.println("________________________________");
+		
+		//the List is also has a size method it will give you how many element are in Array
+		// .size() you can use it on the loops or whatever you trying to do
+		System.out.println(bandori.size());
+		
+		
+		System.out.println("________________________________");
+		
+		//you can also remove all the element without doing it one at a time by using .clear()
+		bandori.clear();//removing all element in bandori
+		System.out.println(bandori);
+		//OUTPUT >> []
+		
+		System.out.println("________________________________");
+		
+		//Converting 1D Array into List 
+		//There's a various way on converting Array into List but this one i found is the "easy" way to do it using Arrays.asList()
+		//Arrays.asList() - it return a List and it takes the Array by which List will be back in other words what elements do you want in Array 
+		List<String> roselia = Arrays.asList("yukina", "Lisa", "Sayo", "Rinko", "Ako");
+		//this is how you print the entire list in one line of code
+		//Arrays.toString(roselia); - when using an .toString() on a List you will get an error thats because toString() is expecting an Array but "roselia" is a List and this aren't compatible
+		//you will need to convert it back to Array to do that you will need to add .toArray() that's will convert it back to an Array
+		System.out.println(Arrays.toString(roselia.toArray()));//using .toArray() will convert it back "roselia" to an Array
+		//OUTPUT >> [yukina, Lisa, Sayo, Rinko, Ako]
+		
+		System.out.println("________________________________");
+		
+		System.out.println("Roselia Members Band:");
+		//iterating through a List
+		//the value will going need it .size()
+		for(int i = 0 ; i < roselia.size() ; i++) {
+			System.out.println(roselia.get(i));
+		}
+	    /*OUTPUT >>Roselia Band:
+                   yukina
+                   Lisa
+                   Sayo
+                   Rinko
+                   Ako
+        */
+		
+		System.out.println("________________________________");
+		
+		//For each loop
+		//it is very similar to for each loop but instead of having bunch of index you basically get rid of that junk and make it a lot cleaner 
+		//it will look like this 
+		System.out.println("Hello, Happy World! Band Members:");
+		List<String> haruHappys = Arrays.asList("Kokoro", "Kaoru", "Hagumin", "Kanon", "Misaki");
+		
+		
+        //you will create a body of a for loop
+		//then you will create a variable of the type of whatever we iterating through
+		//so we working with String 
+		//usually we go of whatever the List name is singular
+		for(String haruHappy : haruHappys) {//each iteration of this loop the variable *haruHappys* will contains the value of each haruHappys Kokoro Kaoru Hagumin Kanon Misaki
+			//you don't need to use .get(i) anymore you can just simple work with the value directly
+			System.out.println(haruHappy);//you going to sysout then just put name of it
+		}
+		//OUTPUT >> Poppin'Party Band Members:
+		/*          Kokoro
+		            Kaoru
+		            Hagumin
+		            Kanon
+		            Misaki
+		*/
+		
+		System.out.println("________________________________");
+		
+		System.out.println("\t All Magical Girls:");
+		//Nested for each loop
+		//2D List
+		//you will create a list of a List
+	    //you need to add List of type String *List<List<String>> that mean it will contain numerous List of String type and the easy way to initialize this by using add method
+		//on the right you will do the same but you need to prefix it with the "new" keyword and on the right you can't directly initialize the List because that is a interface 
+		//you will need to use a specific type such as ArrayList *new ArrayList<List<String>>();
+		List<List<String>> allMagicalGirls = new ArrayList<List<String>>();
+		allMagicalGirls.add(Arrays.asList("Iroha", "Yachan", "Madoka", "homura"));//you can use the .add() 
+		allMagicalGirls.add(Arrays.asList("Mami", "Rena", "kaede", "Mitama"));//you can do it a couple of times a couple of list in here 
+		allMagicalGirls.add(Arrays.asList("Kanagi", "Mifuyu", "Alina", "Nemu"));
+		
+		//you will get an error if you use that last for loop i use because it no longer contain String but instead it contains a List of String
+		//it will look something like this
+		for(List<String> magicalGirl : allMagicalGirls) { //just put List<String> name 
+			for(String magicalGirls : magicalGirl) { //and on the inside you need to create another one which works in the String directly
+				System.out.print(magicalGirls + "   ");//then you can output magicalGirls
+			}
+			System.out.println();//creating a new line 
+		}
+		//OUPUT >> 	     All Magical Girls:
+		//         Iroha   Yachan   Madoka   homura   
+		//         Mami   Rena   kaede   Mitama   
+		//         Kanagi   Mifuyu   Alina   Nemu  
+		
+		System.out.println("________________________________");
+		
+		System.out.println("Pastel*Pallete Members");
+		//Creating a List and convert it back to an Array
+		//There is Various solution but this is the simple method i learned
+		//direct iterate through the elements and add them to an Array
+		
+		List<String> allPastel = Arrays.asList("Aya", "Hina", "Chisato", "Maya", "Eve");
+		String[] pastel = new String[allPastel.size()];//i just used .size()
+		
+		//then you will going to use a for loop
+		for(int i = 0 ; i < allPastel.size() ; i++) {
+			 pastel[i] = allPastel.get(i);//then you will access *pastel[i]* and the assign it a value *allPastel.get(i)
+		}
+		//then you will use sysout and just add .toString() just to see the entire Array
+		System.out.println(Arrays.toString(pastel));
+		//OUTPUT >> Pastel*Pallete Members
+		//          [Aya, Hina, Chisato, Maya, Eve]
+		System.out.println("________________________________");
+		
+		System.out.println("All IJN Ships:");
+		//Creating a 2D List and convert it back to 2D Array
+		
+		List<List<String>> allShips = new ArrayList<List<String>>();
+		allShips.add(Arrays.asList("Akagi", "Amagi", "kaga"));
+		allShips.add(Arrays.asList("Atago", "Choukai", "Nishiro"));
+		allShips.add(Arrays.asList("Taihou", "Yamato", "Nagato"));
+		
+		String[][] ships = new String[allShips.size()][];//using .size() in one bracket
+		
+		for(int i = 0 ; i < allShips.size(); i++) {
+			List<String> row = allShips.get(i);//you will create a List row then and then assign it a value allShips.get(i)
+			ships[i] = row.toArray(new String[row.size()]);//then you will access *ships[i]* and assign it a value *row.toArray* then create a new String with single bracket inside of it is row.size()  
+		}
+		//then you will out put it with .deepToString() to see the entire Array
+		System.out.println(Arrays.deepToString(ships));
+		//OUTPUT >> [[Akagi, Amagi, kaga], [Atago, Choukai, Nishiro], [Taihou, Yamato, Nagato]]
+		
+		System.out.println("________________________________");
+		
+		System.out.println("Sorting a List");
+		//sorting a List
+		List<Integer> allNumber = Arrays.asList(3, 4, 1, 5, 2);
+		//you will need to import Collections *import java.util.Collections;*
+		Collections.sort(allNumber);//this was a void you don't need to assign it to another variable it will change the original list
+		
+		for(int number : allNumber) {
+			System.out.println(number);
+		}
+		//OUTPUT >> Sorting a List
+	    //          1
+		//          2
+		//          3
+		//          4
+		//          5
+		
+		System.out.println("________________________________");
+		
+		System.out.println("Reverse in List");
+		//there is actually a method to reverse if you want to put them into opposite direction
+		Collections.reverse(allNumber);
+		for(int number : allNumber) {
+			System.out.println(number);
+		}
+		//OUTPUT >> Reverse in List
+		//          5
+		//          4
+		//          3
+		//          2
+		//          1
+		
+		
+     }
+}
+	
